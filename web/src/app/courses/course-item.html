@@ -1,0 +1,15 @@
+<div class="course-item">
+    <img class="course-logo" ng-src="{{ $ctrl.course.logo || 'http://fountainjs.io/assets/imgs/angular1.png'}}" />
+    <div class="course-item-text">
+        <h3>
+	    {{ $ctrl.course.name }}
+	  </h3>
+        <p>{{ $ctrl.course.description }}</p>
+    </div>
+    <div class="course-item-button">
+        <a class="learn-btn" ui-sref="classRoom({course_id: $ctrl.course.id})">
+	  	Goto class room
+	  </a>
+    </div>
+</div>
+<div class="delimiter"></div>

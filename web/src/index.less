@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "app/search/search.less";
+@import "app/courses/courses.less";
 
 html, body, #root {
   margin: 0;
@@ -29,7 +30,10 @@ a {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: @base-color;
+  background: @white;
+  &.landing-main {
+    background-color: @base-color;
+  }
 }
 
 .header {
@@ -42,12 +46,17 @@ a {
   font-size: 1.5rem;
   margin: 1rem;
 }
+.header-search-box {
+  flex: 2;
+}
 .header-date {
-  flex: 1;
+  flex: 3;
   text-align: right;
   margin: 1rem;
   color: white;
-  border-radius: 50%;
+  img {
+    border-radius: 50%;
+  }
 }
 
 .title {
@@ -114,4 +123,35 @@ a {
 .tech-h3 {
   font-size: 1.5rem;
   margin: 0 0 2rem 0;
+}
+
+// Button 
+.learn-btn {
+  border: 2px solid @base-color;
+  color: #333;
+  padding: 11px;
+  min-width: 200px;
+  line-height: 16px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 25px;
+  font-weight: 600;
+  color: @base-color;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+  &:hover {
+    background: @base-color;
+    text-decoration: none;
+    cursor: pointer;
+    color: #eee;
+  }
+}
+
+// delimiter
+.delimiter {
+  width: 80%;
+  height: 1px;
+  background: darken(@white, 10%);
+  margin: auto;
+  text-align: center;
 }

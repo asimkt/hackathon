@@ -1,5 +1,8 @@
 angular
   .module('app')
   .component('fountainHeader', {
-    templateUrl: 'app/header.html'
+    templateUrl: 'app/header.html',
+    bindings: {
+      searchBox: '<'
+    }
   });

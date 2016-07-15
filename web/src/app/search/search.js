@@ -6,7 +6,7 @@ angular
   });
 
 /** @ngInject */
-function SearchController($http) {
+function SearchController($http, $state) {
   var vm = this;
 
   vm.countries = [
@@ -31,7 +31,7 @@ function SearchController($http) {
   ];
 
   vm.inputChanged = function(){
-  	console.log('here');
+  	$state.go('courses');
   }
 
   $http

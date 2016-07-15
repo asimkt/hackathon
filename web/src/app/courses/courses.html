@@ -1,7 +1,8 @@
 <div class="main-container">
-  <fountain-header></fountain-header>
+  <fountain-header search-box = "true"></fountain-header>
   <main class="main">
-	
+	<course-item ng-repeat="course in $ctrl.courses" course = "course">
+	</course-item>
   </main>
   <fountain-footer></fountain-footer>
 </div>
