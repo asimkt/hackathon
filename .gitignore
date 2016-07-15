@@ -1,0 +1,11 @@
+# Python Django
+*.pyc
+heimdall_app/migrations/0*
+heimdall/settings/local.py
+static/*
+media/*
+
+
+# Logs
+*.log
+*.log.*
