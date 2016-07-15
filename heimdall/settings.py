@@ -186,3 +186,12 @@ REST_FRAMEWORK = {
     ),
     'EXCEPTION_HANDLER': 'heimdall_app.exception_handler.CustomExceptionHandler',
 }
+
+
+# Courseware Status
+
+STATUS_CHOICES = (
+    (0, 'Live'),
+    (1, 'Completed'),
+    (2, 'Upcoming')
+)
