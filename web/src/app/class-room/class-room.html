@@ -10,7 +10,7 @@
   		</h3>
   	</div>
   	<div class="class-room-main col-sm-8">
-		<video-player video="$ctrl.class_room.video_data"></video-player>
+		<video-player video="$ctrl.class_room.video_data" on-video-ended="$ctrl.startTest()"></video-player>
 		<mind-map class="clearfix"></mind-map>
 	</div>
   	<div class="class-room-aside col-sm-4">

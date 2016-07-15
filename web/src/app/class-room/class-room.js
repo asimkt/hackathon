@@ -6,9 +6,15 @@ angular
   });
 
 /** @ngInject */
-function CourseController() {
+function CourseController(ngDialog) {
   var vm = this;
 
+  vm.startTest = function(){
+    ngDialog.open({
+        template: 'app/class-room/user-evaluation-dialog.html'
+    });
+    // ngDialog.open({ template: 'userEvaluationDialog', className: 'ngdialog-theme-default' });
+  }
   vm.courses = [
     { "name": "Python", "description": "This is a programming course" },
     { "name": "Angular Islands", "description": "This is a programming course" },

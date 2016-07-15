@@ -1,2 +1,2 @@
 angular
-  .module('app', ['ui.router', 'angucomplete-alt', 'ui.bootstrap']);
+  .module('app', ['ui.router', 'angucomplete-alt', 'ui.bootstrap', 'ngDialog', 'ui.event']);

@@ -1,7 +1,48 @@
-<div id="plwrap">
-    <div class="list-group">
-      <a href="#" class="list-group-item">First item</a>
-      <a href="#" class="list-group-item">Second item</a>
-      <a href="#" class="list-group-item">Third item</a>
-    </div>
+<div class="list-group">
+    <p class="list-group-item">Playlist</p>
+    <play-list-item ng-repeat = "video in $ctrl.playListData"
+        video="video">
+    </play-list-item>
+    <a class = "list-group-item" ui-sref="classRoom({courseId: 4, videoId: 5})">
+        <img src="https://placekitten.com/70/70" alt="video" style="float: left; margin-right: 10px;">
+        <div>
+            <h4>Name</h4>
+            <p>Description</p>
+        </div>
+    </a>
+    <a class = "list-group-item" ui-sref="classRoom({courseId: 4, videoId: 5})">
+        <img src="https://placekitten.com/70/70" alt="video" style="float: left; margin-right: 10px;">
+        <div>
+            <h4>Name</h4>
+            <p>Description</p>
+        </div>
+    </a>
+    <a class = "list-group-item" ui-sref="classRoom({courseId: 4, videoId: 5})">
+        <img src="https://placekitten.com/70/70" alt="video" style="float: left; margin-right: 10px;">
+        <div>
+            <h4>Name</h4>
+            <p>Description</p>
+        </div>
+    </a>
+    <a class = "list-group-item" ui-sref="classRoom({courseId: 4, videoId: 5})">
+        <img src="https://placekitten.com/70/70" alt="video" style="float: left; margin-right: 10px;">
+        <div>
+            <h4>Name</h4>
+            <p>Description</p>
+        </div>
+    </a>
+    <a class = "list-group-item" ui-sref="classRoom({courseId: 4, videoId: 5})">
+        <img src="https://placekitten.com/70/70" alt="video" style="float: left; margin-right: 10px;">
+        <div>
+            <h4>Name</h4>
+            <p>Description</p>
+        </div>
+    </a>
+    <a class = "list-group-item" ui-sref="classRoom({courseId: 4, videoId: 5})">
+        <img src="https://placekitten.com/70/70" alt="video" style="float: left; margin-right: 10px;">
+        <div>
+            <h4>Name</h4>
+            <p>Description</p>
+        </div>
+    </a>
 </div>
