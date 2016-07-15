@@ -9,3 +9,7 @@ media/*
 # Logs
 *.log
 *.log.*
+
+
+# Databases
+db.sqlite3
