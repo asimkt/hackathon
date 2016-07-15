@@ -15,5 +15,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('courses', {
       url: '/courses',
       template: '<courses></courses>'
+    })
+    .state('classRoom', {
+      url: '/class/:courseId',
+      template: '<class-room></class-room>'
     });
 }

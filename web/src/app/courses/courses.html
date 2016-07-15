@@ -1,6 +1,6 @@
 <div class="main-container">
   <fountain-header search-box = "true"></fountain-header>
-  <main class="main">
+  <main class="main" ng-class="{'waiting' : $ctrl.apiWait}">
 	<course-item ng-repeat="course in $ctrl.courses" course = "course">
 	</course-item>
   </main>

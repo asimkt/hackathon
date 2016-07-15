@@ -1,6 +1,7 @@
 @import "variables.less";
 @import "app/search/search.less";
 @import "app/courses/courses.less";
+@import "app/class-room/class-room.less";
 
 html, body, #root {
   margin: 0;
@@ -42,7 +43,7 @@ a {
   display: flex;
   align-items: center;
   background-color: @base-color;
-  padding-top: 5px 70px;
+  padding: 5px 70px;
 }
 .header-title {
   flex: 1;
@@ -126,6 +127,36 @@ a {
 .tech-h3 {
   font-size: 1.5rem;
   margin: 0 0 2rem 0;
+}
+
+// waiting
+.waiting {
+    position: relative;
+    -webkit-transition: all .5s;
+       -moz-transition: all .5s;
+        -ms-transition: all .5s;
+         -o-transition: all .5s;
+            transition: all .5s;
+    pointer-events: none;
+    &:before {
+      position: absolute  !important;
+      content: ''  !important;
+      z-index: 14;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.75);
+      display: block !important;
+    }
+    &:after {
+      position: absolute  !important;
+      z-index: 14;
+      top: 300px;
+      left: 50%;
+      content: url('http://i.imgur.com/OeDSHLY.gif?1')  !important;
+    }
 }
 
 // Button 
