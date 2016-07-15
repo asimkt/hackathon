@@ -13,11 +13,13 @@ body, h1, h2, h3 {
 }
 
 a {
-  color: white;
+  color: @white;
   text-decoration: none;
+  font-weight: bold;
 
   &:hover {
-    color: #5aadbb;
+    color: lighten(@white, 10%);
+    text-decoration: none;
   }
 }
 
@@ -40,6 +42,7 @@ a {
   display: flex;
   align-items: center;
   background-color: @base-color;
+  padding-top: 5px 70px;
 }
 .header-title {
   flex: 1;
