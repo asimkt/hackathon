@@ -1,6 +1,7 @@
+
 <div class="main-container">
   <fountain-header search-box = "true"></fountain-header>
-  <main class="main class-room-container">
+  <main class="class-room-container">
   	<div class="class-room-header col-xs-12">
   		<h1>{{$ctrl.class_room.course_name}}Course</h1>
   		<h3>
@@ -10,7 +11,7 @@
   	</div>
   	<div class="class-room-main col-sm-8">
 		<video-player video="$ctrl.class_room.video_data"></video-player>
-		<mind-map></mind-map>
+		<mind-map class="clearfix"></mind-map>
 	</div>
   	<div class="class-room-aside col-sm-4">
 		<browse-wheel> </browse-wheel>
