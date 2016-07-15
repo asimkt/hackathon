@@ -13,3 +13,12 @@ media/*
 
 # Databases
 db.sqlite3
+
+
+#Web App
+web/.tmp/
+web/coverage/
+web/dist/
+web/node_modules/
+web/jspm_packages/
+web/bower_components/

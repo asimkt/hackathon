@@ -1,0 +1,12 @@
+<div class="search-bg-container">
+    <angucomplete-alt id="ex1" class="search-bg-form ng-isolate-scope" placeholder="Search countries" pause="100" selected-object="$ctrl.inputChanged" local-data="$ctrl.countries" search-fields="name" title-field="name" description-field="code" minlength="1" match-class="highlight" input-class="form-control form-control-small">
+        <div class="angucomplete-holder" ng-class="{'angucomplete-dropdown-visible': showDropdown}">
+            <input id="ex1_value" name="" tabindex="" ng-class="{'angucomplete-input-not-empty': notEmpty}" ng-model="searchStr" ng-disabled="disableInput" type="text" placeholder="Search countries" maxlength="524288" ng-focus="onFocusHandler()" class="form-control form-control-small ng-valid-maxlength ng-dirty ng-valid-parse ng-touched ng-empty" ng-blur="hideResults($event)" autocapitalize="off" autocorrect="off" autocomplete="off" ng-change="inputChangeHandler(searchStr)">
+            <div id="ex1_dropdown" class="angucomplete-dropdown ng-hide" ng-show="showDropdown">
+                <div class="angucomplete-searching ng-binding ng-hide" ng-show="searching" ng-bind="textSearching">Searching...</div>
+                <div class="angucomplete-searching ng-binding" ng-show="!searching &amp;&amp; (!results || results.length == 0)" ng-bind="textNoResults">No results found</div>
+                <!-- ngRepeat: result in results -->
+            </div>
+        </div>
+    </angucomplete-alt>
+</div>
