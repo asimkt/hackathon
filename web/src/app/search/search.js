@@ -15,6 +15,11 @@ function SearchController($http, $state) {
     { "name": "Python Django", "code": "Python Django" },
     { "name": "Python Network Programming", "code": "Python Network" },
     { "name": "Python Datascience", "code": "Python Datascience" },
+    { "name": "AngularJS", "code": "Angular web framework" },
+    { "name": "ReactJS", "code": "Facebook's supercool framework" },
+    { "name": "Backbone", "code": "JS framework" },
+    { "name": "Gulp", "code": "Gulp build tool" },
+    { "name": "NodeJS", "code": "NodeJS" }
   ];
 
   vm.inputChanged = function(){
