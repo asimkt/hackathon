@@ -13,7 +13,7 @@ function BrowseWheelController() {
   vm.options = {
             chart: {
                 type: 'sunburstChart',
-                height: 450,
+                height: 340,
                 color: d3.scale.category10(),
                 duration: 250
             }

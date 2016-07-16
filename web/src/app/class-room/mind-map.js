@@ -930,22 +930,64 @@ function MindMapController($timeout) {
     res.results[0].data.forEach(function (row) {
        row.graph.nodes.forEach(function (n) {
          if (idIndex(nodes,n.id) == null)
-           nodes.push({id:n.id,type:n.labels[0],caption:n.properties.name});
+           nodes.push({id:n.id,type:n.properties.type,caption:n.properties.name});
        });
        edges = edges.concat( row.graph.relationships.map(function(r) {
-         return {source:idIndex(nodes,r.startNode),target:idIndex(nodes,r.endNode),caption:r.type};
+         return {source:r.startNode,target:r.endNode,caption:r.type};
        }));
     });
     viz = {nodes:nodes, edges:edges};
-
-          var config = {
+    console.log(viz)
+    var config = {
       dataSource: viz,
       forceLocked: false,
       graphHeight: function(){ return 400; },
-      graphWidth: function(){ return 900; },
-      nodeCaption: function(node){
-        return node.caption;
-      }
+      nodeRadius: 5,
+      fixRootNodes: true,
+      nodeTypes: {
+        type: ["concept", "analysis", "example"]
+      },
+      directedEdges: true,
+      nodeStyle: {
+        "concept": {
+            "radius": 9,
+            "color"  : "#68B9FE",
+            "borderColor": "#000"
+        },
+        "example":{
+            "radius": 8,
+            "color"  : "#e44b23",
+            "borderColor": "#000"
+    },
+  "analysis":{
+            "radius": 8,
+            "color"  : "#907",
+            "borderColor": "#000"
+          },
+          },
+      edgeType: ["progress_to", "example_of"],
+      edgeStyle: {
+          "all": {
+            "width": 2,
+            "color": "#555",
+            "opacity": 0.4,
+            "selected": {
+                "opacity": .7
+              },
+            "highlighted": {
+                "opacity": 1
+              },
+            "hidden": {
+                "opacity": 1
+              }
+          },
+          "progress_to": {
+            "width": 2,
+            "color": "#fff",
+            "opacity": 0.4,
+          },
+        },
+      linkDistance: function(){ return 20; }
     };
 
     alchemy = new Alchemy(config);
